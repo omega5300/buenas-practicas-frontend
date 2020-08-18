@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- 
+  version de algunos estudiantes comunistas/socialistas de univalle precaucion no todos 
+-->
+<html><!-- warn: using lang attr -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- warn: not using -->
+    <meta http-equiv="Content-Language" content="es-ES" /><!-- error: using <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+      .title-bar {
+        background: black;
+        color: white;
+      }
+    </style><!-- bad: separate css -->
+</head>
+<body>
+    <header>
+      <H1>ajax con es6 y jquery</H1><!-- bad: not using uppercase -->
+    </header>
+    <button id="get-users" type="button">obtener datos</button>
+    <table>
+        <thead class="title-bar">
+            <tr>
+                <th>id</th>
+                <th>usuario</th>
+                <th>correo</th>
+                <th>sitio web</th>
+            </tr>
+        </thead>
+        <tbody id="print-users"></tbody>
+    </table>
+    <P id="error-msg"></P><!-- bad: not using uppercase -->
+    <script src="jquery.js" type="text/javascript"></script><!-- bad: not using the attr type -->
+    <script src="ajax-jquery.js" type="text/javascript"></script><!-- bad: not using the attr type -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- version admin SENA, COES, SINDESENA. URIBISTAS y PETRISTAS -->
+<html><!-- warn: lang atribute -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- warn: not using -->
+    <meta http-equiv="Content-Language" content="es-ES" /><!-- error: using <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sena</title>
+    <style type="text/css">
+      .title-bar {
+        background: black;
+      }
+    </style><!-- bad: separate css and not using -->
+    <!--[if lt IE 9]>
+      <script src="html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <H1>ajax</H1><!-- bad: not using uppercase -->
+    </header>
+    <button onclick="getUsers()">obtener datos</button><!-- not using event attr using DOM elements -->
+    <table>
+      <thead class="title-bar">
+        <tr style="color: #ffffff;"><!--bad: style attr using in javascript frameworks -->
+          <th>id<!-- bad not closing tags-->
+          <th>usuario</th>
+          <th>correo<!-- bad not closing tags-->
+          <TH>sitio web</TH><!-- bad: not using uppercase -->
+        </tr>
+      </thead>
+      <tbody id="get-users"></tbody>
+    </table>
+    <p id="error-msg"></p>
+    <script src="jquery.js" languaje="javascript" type="text/javascript"></script><!-- bad: not using the attr languaje and type -->
+    <script languaje="javascript" type="text/javascript">
+      function getUsers() {
+        $.ajax({
+          url: "http://jsonplaceholder.typicode.com/users",
+          method: "GET",
+          dataType: "JSON",
+          success: function (data) {
+            var template = "";
+            $.each(data, function (i, get) {
+                template += "\n            <tr>\n              <td>" +
+                get.id +
+                "</td>\n              <td>" +
+                get.username +
+                "</td>\n              <td>" +
+                get.email +
+                "</td>\n              <td>" +
+                get.website +
+                "</td>\n            </tr>\n            ";
+            })
+            $("#get-users").html(template);
+          },
+          error: function (err) {
+              $("#error-msg").html(err);
+          },
+        });
+      }
+    </script><!-- bad: separate js and not using attr languaje and text -->
+  </body>
+</html>

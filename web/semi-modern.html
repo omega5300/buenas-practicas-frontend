@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- version usando pocas malas practicas -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax xhr</title>
+</head>
+<body>
+    <header>
+	<h1>usuarios</h1>
+    </header>
+    <button id="button">obtener datos</button>
+    <table>
+        <thead style="background: black;">
+            <tr style="color: #fff;"><!--bad: style attr using in javascript frameworks -->
+                <th>id</th>
+                <th>usuario</th>
+                <th>correo</th>
+                <th>sitio web</th>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+    <p class="error"></p>
+    <script src="ajax-xhr.js"></script>
+</body>
+</html>
